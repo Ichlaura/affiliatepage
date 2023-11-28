@@ -1,0 +1,168 @@
+
+
+
+/*.....................HEADER....................*/
+
+@use postcss-preset-env {
+    stage: 0;
+  }
+  
+  /* helpers/grid.css */
+  
+  .grid {
+    inline-size: 90%;
+    margin-inline: auto;
+    max-inline-size: 48em;
+  }
+  
+  /* helpers/sticky.css */
+  
+  .sticky {
+    position: sticky;
+    will-change: transform;
+  }
+  
+  .sticky--top {
+    top: 0;
+  }
+  
+  /* layout/base.css */
+  
+  * {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.75;
+    margin: 0;
+    min-block-size: 100vh;
+  }
+  
+  /* layout/header.css */
+  
+  /* layout/header.css */
+
+.header {
+    background-color: #fff;
+    padding-block: 1em;
+    border-top: 0.5cm solid #000; /* Línea superior negra de 0.5cm */
+    border-bottom: 0.1cm solid #000; /* Línea inferior más delgada */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  .header.is-active::after {
+    opacity: 1;
+  }
+  
+  .logo {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo-img {
+    width: 50px; /* Ajusta el tamaño según tus necesidades */
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* layout/main.css */
+  
+  .main {
+    padding-block: 7em; /* Ajusta el padding para dejar espacio para el header modificado */
+  }
+  
+  /* modules/headline.css */
+  
+  h1 {
+    margin-block: 0 0.5em;
+  }
+  
+  /* modules/navigation.css */
+  
+  .navigation__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation__list--inline {
+    display: flex;
+    gap: 1.5em;
+  }
+  
+  .navigation__link {
+    color: inherit;
+    display: block;
+    padding-inline: 1em;
+    text-decoration: none;
+  }
+  
+  .navigation__link--is-active {
+    background-color: #000;
+    border-radius: 999em;
+    color: #fff;
+  }
+  
+  /* modules/paragraph.css */
+  
+  p {
+    padding-block: 1.5em;
+  }
+  
+  /*.....................FOOTER....................*/
+
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #a5a7a9;
+    text-align: center;
+    color: #040101;
+}
+
+.icons{
+    padding-top: 1rem;
+}
+
+.icons a{
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0.5rem;
+    color: #f4f4f4;
+}
+
+.company-name{
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+}    
+
+@media(min-width: 501px) and (max-width: 768px){
+    html{
+    font-size: 50%;
+    }
+}    
