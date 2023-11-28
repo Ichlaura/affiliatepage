@@ -1,7 +1,18 @@
 
+body {
+display: grid;
+grid-template-rows: repeat(1, 2fr);
+grid-template-columns: repeat(1, 2fr);
+gap: 10px;
+padding: 20px;
+}
 
-
-/*.....................HEADER....................*/
+.grid-item {
+border: 1px solid #ccc;
+padding: 20px;
+text-align: center;
+}
+/*.....................HEADER..................................................*/
 
 @use postcss-preset-env {
     stage: 0;
@@ -125,34 +136,39 @@
     padding-block: 1.5em;
   }
   
-  /*.....................FOOTER....................*/
+  /*.....................FOOTER..................................................*/
 
 
 
 .footer{
-    position: fixed;
+    position: top;
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 11%;
     background: #a5a7a9;
     text-align: center;
     color: #040101;
 }
 
+.footer img {
+    max-width: 60px; /* Establece el ancho máximo de las imágenes */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
 .icons{
-    padding-top: 1rem;
+    padding-top: 0.7rem;
 }
 
 .icons a{
     text-decoration: none;
-    font-size: 2rem;
-    margin: 0.5rem;
+    font-size: 1rem;
+    margin: 0.4rem;
     color: #f4f4f4;
 }
 
 .company-name{
-    font-size: 1.6rem;
-    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    margin-top: 0.1rem;
 }
 
 @media (max-width: 500px){
@@ -166,3 +182,171 @@
     font-size: 50%;
     }
 }    
+
+
+ /*.....................STYLE SLICES..................................................*/
+ .slide {
+    position: top;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.slide-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc( 300px + 3em);
+}
+
+.slide-open:checked + .slide-item {
+    position: top;
+    opacity: 100;
+    width: 100%;
+}
+
+.slide-item {
+    position: center;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
+.slide-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+
+.slide-item img {
+    display: block;
+    height: center;
+    width: center;
+    max-width: 100%; /* La imagen no superará el tamaño del contenedor */
+    max-height: 100%; /* La imagen no superará el tamaño del contenedor */
+}
+
+.slide-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #8d8d8d;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.slide-control.prev {
+    left: 2%;
+}
+
+.slide-control.next {
+    right: 2%;
+}
+
+.slide-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+    display: block;
+}
+
+.slide-indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slide-circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.slide-circulo:hover {
+    color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1 ~ .slide-indicador 
+     li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador 
+      li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador 
+      li:nth-child(3) .slide-circulo {
+    color: #428bca;
+}
+
+#titulo {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+         -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+ /*.....................style carruseles ventas..................................................*/
+
+
+.slide.inner {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+    }
+
+.slide-inner {
+    position: relative;
+    overflow: hidden;
+  
+  }
+
+  .slide-item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+  }
+
+  .slide-item img {
+    max-width: 100%; /* La imagen no superará el tamaño del contenedor */
+    max-height: 100%; /* La imagen no superará el tamaño del contenedor */
+    
+    width: auto;
+    height: auto;
+  }

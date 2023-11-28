@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+     <!-- ------------------------librerias----------------------------------------------------- -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <title>Name</title>
 </head>
 <body>
@@ -37,12 +41,153 @@
 <!-- ------------------------content----------------------------------------------------- -->
 
     <main class="main">
-        <div class="grid">
-            <h1>Lorem ipsum dolor sit.</h1>
-            <p><!-- Contenido del párrafo --></p>
-            <!-- Agrega más contenido según sea necesario -->
+
+<!-- -----------SLIDE----------------------------------------------------- -->
+
+<div class="slide">
+    <div class="slide-inner">
+
+        <input class="slide-open" type="radio" id="slide-1" 
+              name="slide" aria-hidden="true" hidden="" checked="checked">
+        <div class="slide-item">
+            <img src="images/canva1.png">
         </div>
-    </main>
+
+        <input class="slide-open" type="radio" id="slide-2" 
+              name="slide" aria-hidden="true" hidden="" >
+        <div class="slide-item">
+            <img src="images/canva2.png">
+        </div>
+
+        <input class="slide-open" type="radio" id="slide-3" 
+              name="slide" aria-hidden="true" hidden="" >
+        <div class="slide-item">
+            <img src="images/canva2.png">
+        </div>
+        
+        <label for="slide-3" class="slide-control prev control-1">‹</label>
+        <label for="slide-2" class="slide-control next control-1">›</label>
+        <label for="slide-1" class="slide-control prev control-2">‹</label>
+        <label for="slide-3" class="slide-control next control-2">›</label>
+        <label for="slide-2" class="slide-control prev control-3">‹</label>
+        <label for="slide-1" class="slide-control next control-3">›</label>
+        <ol class="slide-indicador">
+            <li>
+                <label for="slide-1" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-2" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-3" class="slide-circulo">•</label>
+            </li>
+        </ol>
+    </div>
+
+</div>
+
+
+
+ <!-- ------------------------body----------------------------------------------------- -->
+
+  <!-- ------------------------body----------------------------------------------------- -->
+
+ <h2>Sección 4</h2>
+    <div class="grid-item">
+        <h2>Sección 4</h2>
+        <!-- Contenido de la primera parte -->
+        <h2>Sección 1</h2>
+      
+        <button>Agregar al carrito</button>
+   
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item">
+                <a href="enlace1.html">
+                    <img src="images/canva1.png" alt="Producto 1">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="enlace2.html">
+                    <img src="images/canva2.png" alt="Producto 2">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="enlace3.html">
+                    <img src="images/canva3.png" alt="Producto 3">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="enlace4.html">
+                    <img src="images/canva2.png" alt="Producto 4">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="enlace5.html">
+                    <img src="images/canva1.png" alt="Producto 5">
+                </a>
+            </div>
+            <label for="slide-3" class="slide-control prev control-1">‹</label>
+            <label for="slide-2" class="slide-control next control-1">›</label>
+            <label for="slide-1" class="slide-control prev control-2">‹</label>
+            <label for="slide-3" class="slide-control next control-2">›</label>
+            <label for="slide-2" class="slide-control prev control-3">‹</label>
+            <label for="slide-1" class="slide-control next control-3">›</label>
+        </div>
+    </div>
+
+</div>
+
+ <!-- ------------------------body----------------------------------------------------- -->
+
+    <h2>Sección 4</h2>
+    <div class="grid-item">
+        <!-- Contenido de la segunda parte -->
+        <h2>Sección 2</h2>
+        <img src="imagen2.jpg" alt="Imagen 2">
+        <button>Agregar al carrito</button>
+    </div>
+
+     <!-- ------------------------body----------------------------------------------------- -->
+
+    <h2>Sección 4</h2>
+    <div class="grid-item">
+        <!-- Contenido de la tercera parte -->
+        <h2>Sección 3</h2>
+        <img src="imagen3.jpg" alt="Imagen 3">
+        <button>Agregar al carrito</button>
+    </div>
+
+     <!-- ------------------------body----------------------------------------------------- -->
+
+    <h2>Sección 4</h2>
+    <div class="grid-item">
+        <!-- Contenido de la cuarta parte -->
+        <h2>Sección 4</h2>
+        <img src="imagen4.jpg" alt="Imagen 4">
+        <button>Agregar al carrito</button>
+    </div>
+
+     <!-- ------------------------body----------------------------------------------------- -->
+
+    <h2>Sección 4</h2>
+    <div class="grid-item">
+        <!-- Contenido de la cuarta parte -->
+        <h2>Sección 4</h2>
+        <img src="imagen4.jpg" alt="Imagen 4">
+        <button>Agregar al carrito</button>
+    </div>
+
+     <!-- ------------------------body----------------------------------------------------- -->
+
+    <h2>Sección 4</h2>
+    <div class="grid-item">
+        <!-- Contenido de la cuarta parte -->
+        <h2>Sección 4</h2>
+        <img src="imagen4.jpg" alt="Imagen 4">
+        <button>Agregar al carrito</button>
+    </div>
  <!-- ------------------------FOOTER----------------------------------------------------- -->
     <footer class="footer">
         <div class="icons">
@@ -61,7 +206,8 @@
             </p>
         </div>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
