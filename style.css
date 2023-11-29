@@ -1,4 +1,7 @@
 
+/*.....................BODY..................................................*/
+
+
 body {
 display: grid;
 grid-template-rows: repeat(1, 2fr);
@@ -7,11 +10,49 @@ gap: 10px;
 padding: 20px;
 }
 
+body {
+    font-size: 14px; /* Tamaño base para el texto */
+    font-weight: normal;
+    line-height:1.2;
+}
+body {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: var(--Lato-font),var(--DM-Serif-Display-font),Helvetica,Arial,tahoma,'Hiragino Maru Gothic Pro','Microsoft YaHei','Hiragino Sans GB',sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #f1f2f6;
+}
+:root {
+    --Lato-font: '__lato_61143d';
+    --DM-Serif-Display-font: '__DM_Serif_Display_be965f';
+    --montserrat: '__Montserrat_26cda3';
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+}
 .grid-item {
 border: 1px solid #ccc;
 padding: 20px;
 text-align: center;
 }
+/* Estilos generales que se aplican en todas las pantallas */
+
+@media (max-width: 768px) {
+    /* Estilos específicos para pantallas de hasta 768px de ancho */
+}
+
+@media (max-width: 480px) {
+    /* Estilos específicos para pantallas de hasta 480px de ancho (p. ej., teléfonos) */
+}
+
 /*.....................HEADER..................................................*/
 
 @use postcss-preset-env {
@@ -182,48 +223,71 @@ text-align: center;
     font-size: 50%;
     }
 }    
-
-
- /*.....................STYLE SLICES..................................................*/
- .slide {
-    position: top;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-    margin-top: 26px;
+@media (max-width: 480px) {
+    img {
+        margin-bottom: 10px; /* Ajuste específico para pantallas muy pequeñas */
+    }
 }
 
+img {
+    max-width: 100%; /* La imagen no será más ancha que su contenedor */
+    height: auto;    /* La altura se ajustará automáticamente */
+}
+
+
+
+ /*.....................CARUSEL..................................................*/
+ 
+ 
+ .slide {
+    position: top;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.54);
+    margin-top: 3px;
+}
+* {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+div {
+    display: block;
+}
 .slide-inner {
     position: relative;
     overflow: hidden;
-    width: 100%;
-    height: calc( 300px + 3em);
+    max-width: 100%;
+    height: calc( 300px + 2em);
 }
 
 .slide-open:checked + .slide-item {
-    position: top;
-    opacity: 100;
-    width: 100%;
+    position: center;
+    opacity: 100%;
+    max-width: 100%;
 }
 
 .slide-item {
     position: center;
     opacity: 0;
     -webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.2s ease-out;
+    transition: max-height .4s ease-out;
+    max-height:100%;
 }
+
 
 .slide-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    max-width: 100%;
     
 }
 
 
 .slide-item img {
     display: block;
-    height: center;
-    width: center;
+    height: auto;
+    width: auto;
     max-width: 100%; /* La imagen no superará el tamaño del contenedor */
     max-height: 100%; /* La imagen no superará el tamaño del contenedor */
 }
@@ -272,7 +336,7 @@ text-align: center;
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: 2%;
+    bottom: 0%;
     left: 0;
     right: 0;
     text-align: center;
@@ -281,7 +345,7 @@ text-align: center;
 
 .slide-indicador li {
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 7px;
 }
 
 .slide-circulo {
@@ -350,3 +414,25 @@ text-align: center;
     width: auto;
     height: auto;
   }
+
+
+
+ /*.....................grid containers..................................................*/
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    grid-column: span 1;
+    grid-row: span 3;
+    background-color: #f8f8f8; /* Color de fondo para ver la cuadrícula */
+    height: calc((1000px + 2em) / 3); /* Ajuste para que coincida con el carrusel */
+}
