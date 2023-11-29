@@ -186,7 +186,7 @@ text-align: center;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 11%;
+    height: 7%;
     background: #a5a7a9;
     text-align: center;
     color: #040101;
@@ -196,6 +196,11 @@ text-align: center;
     max-width: 60px; /* Establece el ancho máximo de las imágenes */
     height: auto; /* Mantiene la proporción de la imagen */
 }
+
+.footer {
+    border-bottom: 20px solid #000; /* Línea inferior del footer con 2 píxeles de grosor y color negro */
+}
+
 .icons{
     padding-top: 0.7rem;
 }
@@ -240,13 +245,18 @@ img {
  
  
  .slide {
-    position: top;
+    position: relative;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.54);
     margin-top: 3px;
 }
+/* Restablece estilos predeterminados para todos los elementos */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
+
 *, *::before, *::after {
     box-sizing: inherit;
 }
@@ -256,40 +266,42 @@ div {
 .slide-inner {
     position: relative;
     overflow: hidden;
-    max-width: 100%;
+    width: 100%;
     height: calc( 300px + 2em);
+    display: flex; /* Para que los elementos internos se alineen en línea */
 }
 
 .slide-open:checked + .slide-item {
-    position: center;
-    opacity: 100%;
-    max-width: 100%;
+    position: relative;
+    opacity: 1;
+    max-width: 100%; /* Añade esto para asegurar que la imagen se ajuste correctamente */
 }
 
 .slide-item {
-    position: center;
+    flex: 0 0 100%; /* Hace que cada elemento ocupe el 100% del ancho del contenedor */
     opacity: 0;
+    min-width: 100%; /* Garantiza que cada slide ocupe el ancho completo */
+    text-align: center;
     -webkit-transition: opacity 0.6s ease-out;
-    transition: max-height .4s ease-out;
-    max-height:100%;
+    transition: opacity 0.6s ease-out;
+    position: relative; /* Corrige el problema aquí */
 }
 
 
 .slide-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente dentro del contenedor */
     max-width: 100%;
+    max-height: 100%;
     
 }
 
 
 .slide-item img {
     display: block;
-    height: auto;
-    width: auto;
-    max-width: 100%; /* La imagen no superará el tamaño del contenedor */
-    max-height: 100%; /* La imagen no superará el tamaño del contenedor */
+    margin: 0 auto;
+    width: 100%; /* Ajusta el ancho al 100% */
+    height: auto; /* Ajusta la altura automáticamente */
 }
 
 .slide-control {
@@ -386,34 +398,6 @@ div {
  /*.....................style carruseles ventas..................................................*/
 
 
-.slide.inner {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 20px;
-    }
-
-.slide-inner {
-    position: relative;
-    overflow: hidden;
-  
-  }
-
-  .slide-item {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ajusta la altura según tus necesidades */
-  }
-
-  .slide-item img {
-    max-width: 100%; /* La imagen no superará el tamaño del contenedor */
-    max-height: 100%; /* La imagen no superará el tamaño del contenedor */
-    
-    width: auto;
-    height: auto;
-  }
 
 
 
