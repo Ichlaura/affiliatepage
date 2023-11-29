@@ -11,7 +11,7 @@ padding: 20px;
 }
 
 body {
-    font-size: 14px; /* Tamaño base para el texto */
+    font-size: 30px; /* Tamaño base para el texto */
     font-weight: normal;
     line-height:1.2;
 }
@@ -64,7 +64,7 @@ text-align: center;
   .grid {
     inline-size: 90%;
     margin-inline: auto;
-    max-inline-size: 48em;
+    max-inline-size: 50em;
   }
   
   /* helpers/sticky.css */
@@ -90,7 +90,7 @@ text-align: center;
   
   body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.75;
+    line-height: 2;
     margin: 0;
     min-block-size: 100vh;
   }
