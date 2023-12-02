@@ -42,52 +42,36 @@
 
     <main class="main">
 
-<!-- -----------CAROUSEL----------------------------------------------------- -->
 
-<div class="slide">
-    <div class="slide-inner">
-
-        <input class="slide-open" type="radio" id="slide-1" 
-              name="slide" aria-hidden="true" hidden="" checked="checked">
-        <div class="slide-item">
-            <img src="images/canva1.png">
-        </div>
-
-        <input class="slide-open" type="radio" id="slide-2" 
-              name="slide" aria-hidden="true" hidden="" >
-        <div class="slide-item">
-            <img src="images/canva2.png">
-        </div>
-
-        <input class="slide-open" type="radio" id="slide-3" 
-              name="slide" aria-hidden="true" hidden="" >
-        <div class="slide-item">
-            <img src="images/canva2.png">
-        </div>
-        
-        <label for="slide-3" class="slide-control prev control-1">‹</label>
-        <label for="slide-2" class="slide-control next control-1">›</label>
-        <label for="slide-1" class="slide-control prev control-2">‹</label>
-        <label for="slide-3" class="slide-control next control-2">›</label>
-        <label for="slide-2" class="slide-control prev control-3">‹</label>
-        <label for="slide-1" class="slide-control next control-3">›</label>
-        <ol class="slide-indicador">
-            <li>
-                <label for="slide-1" class="slide-circulo">•</label>
-            </li>
-            <li>
-                <label for="slide-2" class="slide-circulo">•</label>
-            </li>
-            <li>
-                <label for="slide-3" class="slide-circulo">•</label>
-            </li>
-        </ol>
-    </div>
-
-</div>
+<!-- ------------------------MENU----------------------------------------------------- -->
 
 
 
+<h2>beauty Menu</h2>
+<p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="#">itemL</a></li>
+      <li><a href="#">item</a></li>
+      <li><a href="#">itemt</a></li>
+      <li><a href="#">item</a></li>
+      <li><a href="#">item</a></li>
+      <li><a href="#">item</a></li>
+      <li><a href="#">item</a></li>
+      <li><a href="#">item</a></li>
+      <li><a href="#">item</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+    <h2>Page Content</h2>
+    <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    
+   
  <!-- ------------------------body1----------------------------------------------------- -->
 
  <div class="grid-container">
@@ -113,6 +97,8 @@
   
     <!-- Agrega más .grid-items según sea necesario -->
 </div>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+   
   <!-- ------------------------body2----------------------------------------------------- -->
 
 
@@ -140,7 +126,8 @@
 
     <!-- Agrega más .grid-items según sea necesario -->
 </div>
- <!-- ------------------------body3----------------------------------------------------- -->
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+     <!-- ------------------------body3----------------------------------------------------- -->
 
  <div class="grid-container">
     <div class="grid-item">
@@ -166,9 +153,14 @@
    
     <!-- Agrega más .grid-items según sea necesario -->
 </div>
+    <p>Some text..</p>
+  </div>
+</div>
+
+
      <!-- ------------------------body4----------------------------------------------------- -->
 
-    
+     <h2>maybe are interset in...</h2>
  <div class="grid-container">
     <div class="grid-item">
         <!-- Contenido de la primera parte -->
@@ -176,13 +168,14 @@
         <img src="images/canva1.png" alt="Imagen 1">
         <button>Agregar al carrito</button>
     </div>
-
+  
     <div class="grid-item">
         <!-- Contenido de la segunda parte -->
         <h2>Sección 2</h2>
         <img src="images/canva2.png" alt="Imagen 2">
         <button>Agregar al carrito</button>
     </div>
+ 
     <div class="grid-item">
         <!-- Contenido de la segunda parte -->
         <h2>Sección 2</h2>
@@ -193,39 +186,7 @@
 
     <!-- Agrega más .grid-items según sea necesario -->
 </div>
-     <!-- ------------------------body5----------------------------------------------------- -->
-
     
- <div class="grid-container">
-    <div class="grid-item">
-        <!-- Contenido de la primera parte -->
-        <h2>Sección 1</h2>
-        <img src="images/canva1.png" alt="Imagen 1">
-        <button>Agregar al carrito</button>
-    </div>
-
-    <div class="grid-item">
-        <!-- Contenido de la segunda parte -->
-        <h2>Sección 2</h2>
-        <img src="images/canva2.png" alt="Imagen 2">
-        <button>Agregar al carrito</button>
-    </div>
-    <div class="grid-item">
-        <!-- Contenido de la segunda parte -->
-        <h2>Sección 2</h2>
-        <img src="images/canva2.png" alt="Imagen 2">
-        <button>Agregar al carrito</button>
-    </div>
- 
-
-    <!-- Agrega más .grid-items según sea necesario -->
-</div>
-
-     <!-- ------------------------body----------------------------------------------------- -->
-
-    
- 
-
 
  
  
@@ -247,8 +208,8 @@
             </p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+ 
     <script src="script.js"></script>
 </body>
+
 </html>

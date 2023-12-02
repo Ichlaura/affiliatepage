@@ -1,48 +1,43 @@
- // header
 
-import throttle from "https://cdn.skypack.dev/lodash@4/throttle";
 
-function onScroll() {
-  if (window.pageYOffset) {
-    $$header.classList.add("is-active");
-  } else {
-    $$header.classList.remove("is-active");
+//................... CARRUSEL
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
   }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
-const $$header = document.querySelector(".js-header");
+//................... MENU
 
-window.addEventListener("scroll", throttle(onScroll, 300));
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
 
-
- // swiper
-
-  var swiper = new Swiper('.swiper-container', {
-   
-    slidesPerView: 1,
-    spaceBetween: 10,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-
-
- // carrusel de productos
-
-
-    // Configuración del carrusel
-    $(document).ready(function(){
-        $('.carousel').slick({
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 5,
-            autoplay: true,
-            autoplaySpeed: 2000,
-        });
-    });
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
